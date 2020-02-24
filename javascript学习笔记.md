@@ -36,3 +36,7 @@ Promise 状态
 	2.fulfilled: 成功的完成了操作
 	3.rejected：失败，没有完成操作
 	4.settled: 处于fulfilled或者rejected任意状态，不是pending
+	
+函数提升仅适用于函数声明，而不适用于函数表达式
+	函数声明： function test(){ consloe.log("123")}
+	函数表达式：var test = function(){consloe.log("123")}
