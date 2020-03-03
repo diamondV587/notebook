@@ -199,7 +199,7 @@ function throttle(func, wait) {
 }
 
 function throttle(func, wait) {
-  let timtout;
+  let timeout;
   return function() {
     if (timeout) clearTimeout(timeout);
     let callNow = !timeout;
@@ -374,3 +374,36 @@ element.addEventListener(type, listener, useCapture);
 ```
 
 ## 前端跨域处理的几种方式
+
+1. jsonp
+2. cros
+
+## 一个url地址到最终的页面渲染完成，发生了什么
+
+1. DNS解析，将域名地址解析为ip地址
+
+- 浏览器DNS缓存
+- 系统DNS缓存
+- 路由器DNS缓存
+- 网络运营商DNS缓存
+- 递归搜索，blog.baidu.com
+ .com域名下查找DNS解析
+ .baidu域名下查找DNS解析
+ blog域名下查找DNS解析
+ 出错了
+
+2. TCP连接,TCP三次握手
+
+- 第一次握手，由浏览器发起，告诉服务器要发送请求了
+- 第二次握手，又服务器发起，告诉浏览器准备接受了，你赶快发送吧
+- 第三次握手，由浏览器发起，告诉服务器，我马上发了，准备接受吧
+
+3. 发送请求(发送报文，HTTP协议的通信内容)
+4. 接受响应（响应报文）
+5. 渲染页面
+- 遇见HTML标记，浏览器调用HTML解析器解析成Token并构建成dom树
+- 遇见style/link标记，浏览器调用css解析器，处理css标记并构建cssom树
+- 遇见script标记，调用javascript解析器，处理script代码（绑定时间，修改dom树/cssom树）
+- 将dom树和cssom树合并成一个渲染树
+- 根据渲染树计算布局，计算每个节点的几何信息
+- 将各个节点的颜色绘制到屏幕（渲染）
