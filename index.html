@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+      /*定位方案（3种）*/
+      /*方案1，知道具体的宽高*/
+      /*
+      body {
+        position:relative
+      }
+      .box {
+        box-sizing: content-box;
+        width: 200px;
+        height: 100px;
+        line-height:100px;
+        text-align:center;
+        border: 1px solid red;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -100px;
+      } */
+
+      /*方案2，有宽高就行*/
+      /* 
+      body {
+        position:relative
+      }
+      .box {
+        box-sizing: content-box;
+        width: 200px;
+        height: 100px;
+        line-height:100px;
+        text-align:center;
+        border: 1px solid red;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+      } */
+      /*方案3，可以不需要宽高，但是兼容性差*/
+      /* body {
+        position:relative
+      }
+      .box {
+        box-sizing: content-box;
+        width: 200px;
+        height: 100px;
+        line-height:100px;
+        text-align:center;
+        border: 1px solid red;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      } */
+
+      /*方案4 使用flex布局 */
+      /* body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        box-sizing: content-box;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        border: 1px solid red;
+      } */
+
+      /*使用js的方案 */
+      body {
+        position: relative;
+      }
+      .box {
+        box-sizing: content-box;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box">居中对齐</div>
+
+    <!-- <script>
+      // /*使用js的方案 */
+      let Html = document.documentElement,
+        winW = Html.clientWidth,
+        winH = Html.clientHeight,
+        boxW = box.offsetWidth,
+        boxH = box.offsetHeight;
+
+      box.style.position = "absolute";
+      box.style.left = (winW - boxW) / 2 + "px";
+      box.style.top = (winH - boxH) / 2 + "px";
+    </script> -->
+  </body>
+</html>
