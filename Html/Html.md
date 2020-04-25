@@ -90,7 +90,7 @@
    进行文档解析，否则就以兼容模式进行解析。在标准模式下，浏览器的解析规则都是按照最新的标准进行解析的。而在兼容模式下，浏
    览器会以向后兼容的方式来模拟老式浏览器的行为，以保证一些老的网站的正确访问。
 
-   在 html5 之后不再需要指定 DTD 文档，因为 html5 以前的 html 文档都是基于 SGML 的，所以需要通过指定 DTD 来定义文
+   在 html5 之后不再需要指定 DTD 文档，因为 html5 以前的 html 文档都是基于 SGML（Standard Generalized Markup Language标准通用标记语言） 的，所以需要通过指定 DTD 来定义文
    档中允许的属性以及一些规则。而 html5 不再基于 SGML 了，所以不再需要使用 DTD。
    ```
   
@@ -128,24 +128,17 @@
    
    DTD 是对 HTML 文档的声明，还会影响浏览器的渲染模式（工作模式）。
    ```
-
 #### 6. 行内元素定义
    ```
    HTML4 中，元素被分成两大类: inline （内联元素）与 block（块级元素）。一个行内元素只占据它对应标签的边框所包含的空
    间。
-   
    常见的行内元素有 a b span img strong sub sup button input label select textarea
    ```
-   
-
 #### 7. 块级元素定义
    ```
    块级元素占据其父元素（容器）的整个宽度，因此创建了一个“块”。
-
    常见的块级元素有  div ul ol li dl dt dd h1 h2 h3 h4 h5 h6 p 
    ```
-
-
 #### 8. 行内元素与块级元素的区别？
    ```
    HTML4中，元素被分成两大类：inline （内联元素）与 block （块级元素）。
@@ -256,28 +249,28 @@
 
 
 #### 16. 常见浏览器所用内核
-   ```
-    （1） IE 浏览器内核：Trident 内核，也是俗称的 IE 内核；
 
-    （2） Chrome 浏览器内核：统称为 Chromium 内核或 Chrome 内核，以前是 Webkit 内核，现在是 Blink内核；
+```
+   （1） IE 浏览器内核：Trident 内核，也是俗称的 IE 内核；
 
-    （3） Firefox 浏览器内核：Gecko 内核，俗称 Firefox 内核；
+   （2） Chrome 浏览器内核：统称为 Chromium 内核或 Chrome 内核，以前是 Webkit 内核，现在是 Blink内核；
 
-    （4） Safari 浏览器内核：Webkit 内核；
+   （3） Firefox 浏览器内核：Gecko 内核，俗称 Firefox 内核；
 
-    （5） Opera 浏览器内核：最初是自己的 Presto 内核，后来加入谷歌大军，从 Webkit 又到了 Blink 内核；
+   （4） Safari 浏览器内核：Webkit 内核；
 
-    （6） 360浏览器、猎豹浏览器内核：IE + Chrome 双内核；
+   （5） Opera 浏览器内核：最初是自己的 Presto 内核，后来加入谷歌大军，从 Webkit 又到了 Blink 内核；
 
-    （7） 搜狗、遨游、QQ 浏览器内核：Trident（兼容模式）+ Webkit（高速模式）；
+   （6） 360浏览器、猎豹浏览器内核：IE + Chrome 双内核；
 
-    （8） 百度浏览器、世界之窗内核：IE 内核；
+   （7） 搜狗、遨游、QQ 浏览器内核：Trident（兼容模式）+ Webkit（高速模式）；
 
-    （9） 2345浏览器内核：好像以前是 IE 内核，现在也是 IE + Chrome 双内核了；
+   （8） 百度浏览器、世界之窗内核：IE 内核；
 
-    （10）UC 浏览器内核：这个众口不一，UC 说是他们自己研发的 U3 内核，但好像还是基于 Webkit 和 Trident ，还有说
-         是基于火狐内核。
-   ```
+   （9） 2345浏览器内核：好像以前是 IE 内核，现在也是 IE + Chrome 双内核了；
+
+   （10）UC 浏览器内核：这个众口不一，UC 说是他们自己研发的 U3 内核，但好像还是基于 Webkit 和 Trident ，还有说是基于火狐内核。
+```
 
 #### 17. 浏览器的渲染原理？
    ```

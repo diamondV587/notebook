@@ -2191,7 +2191,8 @@ p:after {
 #### 99.css 实现上下固定中间自适应布局？
 
 ```css
-利用绝对定位实现body {
+利用绝对定位实现
+body {
   padding: 0;
   margin: 0;
 }
@@ -2417,12 +2418,12 @@ body {
 }
 
 .left {
-  flex: 00100px;
+  flex: 0 0 100px;
   background: tomato;
 }
 
 .right {
-  flex: 00200px;
+  flex: 0 0 200px;
   background: gold;
 }
 
@@ -2599,7 +2600,7 @@ body {
   height: 0;
   border-width: 100px;
   border-style: solid;
-  border-color: tomatotransparenttransparenttransparent;
+  border-color: tomato transparent transparent transparent;
 }
 ```
 
